@@ -17,6 +17,15 @@ const allPresidents = JSON.parse(rawPresidents);
 // console.log(allPresidents);
 
 // 1.1 TODO your code here 
+function bornAfter1950Func(array){
+    array.forEach(element => {
+        if(element.birth_year > 1950){
+            return element;
+        }
+    });
+}
+
+//
 allPresidents.presidentsBornAfter1950;
 // Get all the presidents born after 1950
 // Expected result:
@@ -29,7 +38,7 @@ allPresidents.presidentsBornAfter1950;
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-const presidentsBornAfter1950 = presidents => allPresidents.JSON.filter(x => x.birth_year < 1950);
+const presidentsBornAfter1950 = presidents => bornAfter1950Func(presidents);
 
 // use this line to test your code
 console.log(presidentsBornAfter1950(allPresidents));
