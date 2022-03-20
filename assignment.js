@@ -7,12 +7,17 @@
 
 // load presidents - do not change the following three lines
 const fs = require('fs');
-const rawPresidents = fs.readFileSync('data/presidents.js');
+const collect = require('collect.js');
+//---------------------------------------------------------------------------------------------------------------
+//This will not work, have to be changed to const rawPresidents = fs.readFileSync('presidents.js');
+//---------------------------------------------------------------------------------------------------------------
+const rawPresidents = fs.readFileSync('presidents.js');
 const allPresidents = JSON.parse(rawPresidents);
 
 // console.log(allPresidents);
 
 // 1.1 TODO your code here 
+allPresidents.presidentsBornAfter1950;
 // Get all the presidents born after 1950
 // Expected result:
 /*
@@ -24,7 +29,7 @@ const allPresidents = JSON.parse(rawPresidents);
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-const presidentsBornAfter1950 = presidents => null;
+const presidentsBornAfter1950 = presidents => collect(allPresidents.filter(x => x.birth_year < 1950)).toArray();
 
 // use this line to test your code
 console.log(presidentsBornAfter1950(allPresidents));
