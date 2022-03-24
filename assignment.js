@@ -17,10 +17,10 @@ const allPresidents = JSON.parse(rawPresidents);
 // console.log(allPresidents);
 
 // 1.1 TODO your code here 
-function bornAfter1950Func(array){
+function bornAfter1950Func(array) {
     array.forEach(element => {
-        if(element.birth_year > 1950){
-            return element;
+        if (element.birth_year > 1950) {
+            console.log(element);
         }
     });
 }
@@ -38,7 +38,7 @@ allPresidents.presidentsBornAfter1950;
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-const presidentsBornAfter1950 = presidents => bornAfter1950Func(presidents);
+const presidentsBornAfter1950 = allPresidents => bornAfter1950Func(allPresidents);
 
 // use this line to test your code
 console.log(presidentsBornAfter1950(allPresidents));
@@ -73,7 +73,7 @@ console.log(avgBirthRepublicanPresidents(allPresidents));
 
 // ### DO NOT CHANGE THE FOLLOWING LINES
 module.exports = {
-    presidentsBornAfter1950, 
+    presidentsBornAfter1950,
     allPresidents,
     getPresidentByName,
     avgBirthRepublicanPresidents
