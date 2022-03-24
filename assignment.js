@@ -38,7 +38,13 @@ allPresidents.presidentsBornAfter1950;
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-const presidentsBornAfter1950 = allPresidents => bornAfter1950Func(allPresidents);
+const presidentsBornAfter1950 = (allPresidents) => {
+    allPresidents.forEach(element => {
+        if (element.birth_year > 1950) {
+            console.log(element);
+        }
+    });
+}
 
 // use this line to test your code
 console.log(presidentsBornAfter1950(allPresidents));
