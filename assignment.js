@@ -11,7 +11,7 @@ require('collect.js');
 //---------------------------------------------------------------------------------------------------------------
 //This will not work, have to be changed to const rawPresidents = fs.readFileSync('presidents.js');
 //---------------------------------------------------------------------------------------------------------------
-const rawPresidents = fs.readFileSync('data/presidents.js');
+const rawPresidents = fs.readFileSync('presidents.js');
 const allPresidents = JSON.parse(rawPresidents);
 
 // console.log(allPresidents);
@@ -32,14 +32,6 @@ allPresidents.presidentsBornAfter1950;
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-// const presidentsBornAfter1950 = (allPresidents) => {
-//     allPresidents.forEach(element => {
-//         if (element.birth_year > 1950) {
-//             //console.log(element);
-//             return element;
-//         }
-//     });
-// }
 
 const presidentsBornAfter1950 = allPresidents.filter(element => element.birth_year > 1950)[0];
 
