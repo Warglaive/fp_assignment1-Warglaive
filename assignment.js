@@ -37,7 +37,7 @@ const presidentsBornAfter1950 = allPresidents.filter(element => element.birth_ye
 
 
 // use this line to test your code
-console.log(presidentsBornAfter1950);
+console.log(presidentsBornAfter1950[0]);
 
 
 // 1.2. TODO write a function to get the president data by his name
@@ -54,7 +54,7 @@ console.log(presidentsBornAfter1950);
 const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName);
 
 // use this line to test your code
-console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
+console.log(getPresidentByName(allPresidents, 'ROOSEVELT T')[0]);
 
 
 // 1.3. TODO your code here:
