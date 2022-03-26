@@ -66,7 +66,7 @@ let republicanPresidents = allPresidents.filter(x => x.party === 'REPUBLICAN');
 const avgBirthRepublicanPresidents = republicanPresidents => republicanPresidents.filter(y => y.birth_year)
     .reduce((acc, b) => acc + b.birth_year, 0) / republicanPresidents.length;
 // use this line to test your code
-console.log(avgBirthRepublicanPresidents(republicanPresidents));
+console.log(Math.round(avgBirthRepublicanPresidents(republicanPresidents)));
 
 // ### DO NOT CHANGE THE FOLLOWING LINES
 module.exports = {
