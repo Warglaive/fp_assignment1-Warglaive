@@ -32,17 +32,20 @@ allPresidents.presidentsBornAfter1950;
     party: 'DEMOCRATIC',
     state_id_born: 34 } ]
 */
-const presidentsBornAfter1950 = (allPresidents) => {
-    allPresidents.forEach(element => {
-        if (element.birth_year > 1950) {
-            //console.log(element);
-            return element;
-        }
-    });
-}
+// const presidentsBornAfter1950 = (allPresidents) => {
+//     allPresidents.forEach(element => {
+//         if (element.birth_year > 1950) {
+//             //console.log(element);
+//             return element;
+//         }
+//     });
+// }
+
+const presidentsBornAfter1950 = allPresidents.filter(element => element.birth_year > 1950)[0];
+
 
 // use this line to test your code
-console.log(presidentsBornAfter1950(allPresidents));
+console.log(presidentsBornAfter1950);
 
 
 // 1.2. TODO write a function to get the president data by his name
