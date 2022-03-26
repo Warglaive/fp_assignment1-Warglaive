@@ -33,7 +33,7 @@ allPresidents.presidentsBornAfter1950;
     state_id_born: 34 } ]
 */
 
-const presidentsBornAfter1950 = allPresidents.filter(element => element.birth_year > 1950)[0];
+const presidentsBornAfter1950 = allPresidents.filter(element => element.birth_year > 1950);
 
 
 // use this line to test your code
@@ -51,7 +51,7 @@ console.log(presidentsBornAfter1950);
     party: 'REPUBLICAN',
     state_id_born: 46 } ]
 */
-const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName)[0];
+const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName);
 
 // use this line to test your code
 console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
