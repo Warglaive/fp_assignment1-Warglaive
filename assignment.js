@@ -11,7 +11,7 @@ require('collect.js');
 //---------------------------------------------------------------------------------------------------------------
 //This will not work, have to be changed to const rawPresidents = fs.readFileSync('presidents.js');
 //---------------------------------------------------------------------------------------------------------------
-const rawPresidents = fs.readFileSync('presidents.js');
+const rawPresidents = fs.readFileSync('data/presidents.js');
 const allPresidents = JSON.parse(rawPresidents);
 
 // console.log(allPresidents);
