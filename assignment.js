@@ -51,10 +51,10 @@ console.log(presidentsBornAfter1950(allPresidents));
     party: 'REPUBLICAN',
     state_id_born: 46 } ]
 */
-const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName);
+const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName)[0];
 
 // use this line to test your code
-console.log(getPresidentByName(allPresidents, 'ROOSEVELT T')[0]);
+console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
 
 
 // 1.3. TODO your code here:
@@ -63,7 +63,7 @@ console.log(getPresidentByName(allPresidents, 'ROOSEVELT T')[0]);
 // -> calculate the average birth year of all REPUBLICAN presidents!!
 
 //let republicanPresidents = allPresidents.filter(x => x.party === 'REPUBLICAN');
-const avgBirthRepublicanPresidents = (allPres) => allPres.filter(allPres => allPres.party === 'REPUBLICAN' && allPres.birth_year)
+const avgBirthRepublicanPresidents = (allPres) => allPres.filter(p=>p.party==='REPUBLICAN').filter(x=>x.birth_year)
 .reduce((acc, allPres) => acc + allPres.birth_year, 0) / allPres.length;
 // use this line to test your code
 console.log(avgBirthRepublicanPresidents(allPresidents));
