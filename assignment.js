@@ -63,8 +63,8 @@ console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
 // -> calculate the average birth year of all REPUBLICAN presidents!!
 
 //let republicanPresidents = allPresidents.filter(x => x.party === 'REPUBLICAN');
-const avgBirthRepublicanPresidents = (allPres) => allPres.filter(p=>p).filter(x=>x.birth_year)
-.reduce((acc, allPres) => acc + allPres.birth_year, 0) / allPres.length;
+const avgBirthRepublicanPresidents = (allPres) => allPres.filter(p => p.party === 'REPUBLICAN')
+.reduce((acc, allPres) => acc + allPres.birth_year, 0) / allPres.filter(p => p.party === 'REPUBLICAN').length;
 // use this line to test your code
 console.log(avgBirthRepublicanPresidents(allPresidents));
 
