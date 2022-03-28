@@ -11,7 +11,7 @@ require('collect.js');
 //---------------------------------------------------------------------------------------------------------------
 //This will not work, have to be changed to const rawPresidents = fs.readFileSync('presidents.js');
 //---------------------------------------------------------------------------------------------------------------
-const rawPresidents = fs.readFileSync('data/presidents.js');
+const rawPresidents = fs.readFileSync('presidents.js');
 const allPresidents = JSON.parse(rawPresidents);
 
 // console.log(allPresidents);
@@ -33,11 +33,11 @@ allPresidents.presidentsBornAfter1950;
     state_id_born: 34 } ]
 */
 
-const presidentsBornAfter1950 = allPresidents.filter(element => element.birth_year > 1950);
+const presidentsBornAfter1950 = (x) => x.filter(element => element.birth_year > 1950)[0];
 
 
 // use this line to test your code
-console.log(presidentsBornAfter1950[0]);
+console.log(presidentsBornAfter1950(allPresidents));
 
 
 // 1.2. TODO write a function to get the president data by his name
