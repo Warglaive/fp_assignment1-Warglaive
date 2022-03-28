@@ -11,7 +11,7 @@ require('collect.js');
 //---------------------------------------------------------------------------------------------------------------
 //This will not work, have to be changed to const rawPresidents = fs.readFileSync('presidents.js');
 //---------------------------------------------------------------------------------------------------------------
-const rawPresidents = fs.readFileSync('data/presidents.js');
+const rawPresidents = fs.readFileSync('presidents.js');
 const allPresidents = JSON.parse(rawPresidents);
 
 // console.log(allPresidents);
@@ -51,10 +51,10 @@ console.log(presidentsBornAfter1950(allPresidents));
     party: 'REPUBLICAN',
     state_id_born: 46 } ]
 */
-const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName)[0];
+const getPresidentByName = (presidents, presidentName) => presidents.filter(x => x.name === presidentName);
 
 // use this line to test your code
-console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
+console.log(getPresidentByName(allPresidents, 'ROOSEVELT T')[0]);
 
 
 // 1.3. TODO your code here:
@@ -63,7 +63,7 @@ console.log(getPresidentByName(allPresidents, 'ROOSEVELT T'));
 // -> calculate the average birth year of all REPUBLICAN presidents!!
 
 //let republicanPresidents = allPresidents.filter(x => x.party === 'REPUBLICAN');
-const avgBirthRepublicanPresidents = (allPres) => allPres.filter(p=>p.party==='REPUBLICAN').filter(x=>x.birth_year)
+const avgBirthRepublicanPresidents = (allPres) => allPres.filter(p=>p).filter(x=>x.birth_year)
 .reduce((acc, allPres) => acc + allPres.birth_year, 0) / allPres.length;
 // use this line to test your code
 console.log(avgBirthRepublicanPresidents(allPresidents));
